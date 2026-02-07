@@ -1,0 +1,21 @@
+// Main Styles Entry Point
+
+// 1. Configuration
+@import 'variables';
+@import 'mixins';
+
+// 2. Base Styles
+@import 'reset';
+
+// 3. Components
+@import 'components/container';
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/install';
+@import 'components/features';
+@import 'components/workflow';
+@import 'components/cta';
+@import 'components/footer';
+
+// 4. Animations
+@import 'animations';

@@ -1,0 +1,80 @@
+// Fade In Animation
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Checkmark Animation
+@keyframes checkmark {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+// Slide In From Left
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Slide In From Right
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Pulse Animation
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+// Apply Animations
+.hero,
+.features,
+.workflow,
+.cta {
+    animation: fadeIn 0.6s ease-out;
+}
+
+// Animation Delays for Sequential Loading
+.feature-card {
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+            animation: fadeIn 0.6s ease-out #{$i * 0.1}s both;
+        }
+    }
+}
+
+.workflow-step {
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            animation: slideInLeft 0.6s ease-out #{$i * 0.15}s both;
+        }
+    }
+}

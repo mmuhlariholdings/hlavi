@@ -1,0 +1,44 @@
+.hero {
+    padding: $spacing-xl 0;
+    text-align: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba($color-primary, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    @include respond-to(md) {
+        padding: $spacing-lg 0;
+    }
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: $spacing-md;
+    position: relative;
+}
+
+.gradient-text {
+    @include gradient-text;
+}
+
+.hero-subtitle {
+    color: $color-text;
+}
+
+.hero-description {
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+    max-width: 600px;
+    margin: 0 auto $spacing-lg auto;
+}

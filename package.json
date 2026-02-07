@@ -1,0 +1,22 @@
+{
+  "name": "hlavi-landing-page",
+  "version": "1.0.0",
+  "description": "Hlavi landing page",
+  "scripts": {
+    "sass": "sass scss/styles.scss css/styles.css",
+    "sass:watch": "sass --watch scss/styles.scss css/styles.css",
+    "sass:build": "sass scss/styles.scss css/styles.css --style compressed",
+    "serve": "python3 -m http.server 8000",
+    "dev": "concurrently \"npm run sass:watch\" \"npm run serve\""
+  },
+  "keywords": [
+    "hlavi",
+    "landing-page"
+  ],
+  "author": "Mmuhlari Holdings",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "sass": "^1.69.5"
+  }
+}

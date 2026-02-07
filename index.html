@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hlavi - CLI-based kanban task management with AI agent support">
+    <meta name="keywords" content="cli, kanban, task management, ai agent, productivity">
+    <meta property="og:title" content="Hlavi - CLI Task Management">
+    <meta property="og:description" content="CLI-based kanban task management with AI agent support">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hlavi.com">
+    <title>Hlavi - CLI Task Management with AI</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">hlavi</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="https://docs.hlavi.com">Docs</a></li>
+                    <li><a href="https://github.com/mmuhlariholdings/hlavi">GitHub</a></li>
+                    <li><a href="https://github.com/mmuhlariholdings/hlavi/releases">Releases</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    <span class="gradient-text">CLI task management</span><br>
+                    <span class="hero-subtitle">with AI automation</span>
+                </h1>
+                <p class="hero-description">
+                    Manage your kanban board from the terminal. Let AI agents complete tasks for you.
+                </p>
+
+                <div class="install-section">
+                    <div class="install-box">
+                        <div class="install-header">
+                            <span class="platform">Install</span>
+                        </div>
+                        <div class="command-wrapper">
+                            <code class="install-command" id="install-command">cargo install --git https://github.com/mmuhlariholdings/hlavi-cli</code>
+                            <button class="copy-btn" id="copy-btn" aria-label="Copy install command">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M10.5 1H3.5C2.67 1 2 1.67 2 2.5V11.5H3.5V2.5H10.5V1ZM12.5 4H6.5C5.67 4 5 4.67 5 5.5V13.5C5 14.33 5.67 15 6.5 15H12.5C13.33 15 14 14.33 14 13.5V5.5C14 4.67 13.33 4 12.5 4ZM12.5 13.5H6.5V5.5H12.5V13.5Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="install-note">Requires Rust 1.75+</div>
+                    </div>
+
+                    <div class="quick-start">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command">hlavi init</span>
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command">hlavi tickets create "Build my app"</span>
+                        </div>
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command">hlavi agent start TIK001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>CLI First</h3>
+                        <p>Fast, keyboard-driven workflow. No context switching.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI Powered</h3>
+                        <p>Let AI agents complete tasks while you review.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>Git Friendly</h3>
+                        <p>All data stored as JSON. Version control your tasks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Self Contained</h3>
+                        <p>No external database. Works offline by default.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Cross Platform</h3>
+                        <p>Works on macOS, Linux, and Windows.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔓</div>
+                        <h3>Open Source</h3>
+                        <p>MIT/Apache-2.0 licensed. Community driven.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow">
+            <div class="container">
+                <h2 class="section-title">Simple Workflow</h2>
+                <div class="workflow-steps">
+                    <div class="workflow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Create Tickets</h4>
+                            <p>Organize your work with tickets and acceptance criteria</p>
+                            <code>hlavi tickets create "Feature name"</code>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Configure Agent</h4>
+                            <p>Set up AI model and execution mode (attended/unattended)</p>
+                            <code>hlavi agent configure</code>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Let AI Work</h4>
+                            <p>Agent analyzes, plans, and executes your tasks</p>
+                            <code>hlavi agent start TIK001</code>
+                        </div>
+                    </div>
+                    <div class="workflow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Review & Iterate</h4>
+                            <p>Approve changes or provide feedback for improvements</p>
+                            <code>hlavi tickets show TIK001</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to get started?</h2>
+                <div class="cta-buttons">
+                    <a href="https://docs.hlavi.com" class="btn btn-primary">Read the Docs</a>
+                    <a href="https://github.com/mmuhlariholdings/hlavi" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://docs.hlavi.com">Documentation</a></li>
+                        <li><a href="https://docs.hlavi.com/getting-started/installation">Installation</a></li>
+                        <li><a href="https://docs.hlavi.com/cli/commands">CLI Reference</a></li>
+                        <li><a href="https://docs.hlavi.com/agent/overview">Agent Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi">GitHub</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi/issues">Issues</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi/discussions">Discussions</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi/releases">Releases</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="https://www.mmuhlariholdings.co.za">Mmuhlari Holdings</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi-cli">CLI Repository</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi-core">Core Library</a></li>
+                        <li><a href="https://github.com/mmuhlariholdings/hlavi-api">API Server</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mmuhlari Holdings. Licensed under MIT OR Apache-2.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

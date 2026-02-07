@@ -1,0 +1,92 @@
+// Gradient Text
+@mixin gradient-text {
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+// Card Style
+@mixin card($hover: true) {
+    background: $color-bg-secondary;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+    transition: all $transition-base;
+
+    @if $hover {
+        &:hover {
+            transform: translateY(-4px);
+            border-color: $color-primary;
+            box-shadow: $shadow-lg;
+        }
+    }
+}
+
+// Responsive Media Queries
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: $breakpoint-sm) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (max-width: $breakpoint-md) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (max-width: $breakpoint-lg) {
+            @content;
+        }
+    } @else if $breakpoint == xl {
+        @media (max-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+}
+
+// Button Base
+@mixin button-base {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: $radius-md;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all $transition-base;
+    font-size: $font-size-md;
+    cursor: pointer;
+    border: none;
+
+    &:active {
+        transform: translateY(-1px);
+    }
+}
+
+// Flex Center
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Absolute Center
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// Truncate Text
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Focus Styles
+@mixin focus-visible {
+    &:focus-visible {
+        outline: 2px solid $color-primary;
+        outline-offset: 2px;
+    }
+}
