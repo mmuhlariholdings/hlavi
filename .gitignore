@@ -6,9 +6,6 @@ package-lock.json
 .sass-cache/
 *.css.map
 
-# Hlavi
-.hlavi/
-
 # OS files
 .DS_Store
 Thumbs.db
